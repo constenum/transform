@@ -1,0 +1,4 @@
+/* Fighter Aircraft Specs
+------------------------------ */
+source1:  http://www.globalsecurity.org/military/systems/aircraft/
+source2:  https://fas.org/man/dod-101/sys/ac/

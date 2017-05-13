@@ -1,0 +1,240 @@
+/* Border Box Model
+------------------------------ */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* Default Styles
+------------------------------ */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, "Trebuchet MS", sans-serif;
+}
+h1,
+h2 {
+    font-family: 'Black Ops One', cursive;
+    color: #011A91;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 1.45em;
+}
+h3 {
+    color: #006485;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+header {
+    text-align: center;
+    transition: font-size 1s ease-in;
+}
+/* transition */
+header:hover {
+  font-size: 1.2em;
+}
+a {
+    text-decoration: none;
+}
+span {
+    font-size: .7em;
+    font-style: italic;
+}
+p {
+    font-size: 1em;
+    line-height: 1.3em;
+}
+nav {
+    background-color: #00BFFF;
+}
+#sanmenu {
+    font-family: 'Black Ops One', cursive;
+}
+article {
+    background-color: rgba(0, 132, 176, .3);
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 10px;
+}
+.email {
+    background-color: rgba(0, 132, 176, .6);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+label,
+input,
+button {
+    display: block;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    margin-top: 10px;
+    border: 2px #00BFFF solid;
+}
+button {
+    background-color: #FFC02A;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: background-color 1s ease-in, color 1s ease-in, font-size 1s ease-in;
+}
+/* transition */
+button:hover {
+    background-color: #011A91;
+    color: white;
+    font-size: 1.1em;
+}
+.sameHeights {
+    position: relative;
+}
+aside {
+    background-color: #FFC02A;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 10px;
+}
+aside h2,
+aside h3 {
+    margin: 0;
+    padding: 0;
+}
+summary {
+    font-size: .95em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+details {
+    font-size: .8em;
+}
+details:last-child {
+    margin-bottom: 20px;
+}
+details p, details a {
+    margin: 0;
+    padding: 0 0 1px 25px;
+}
+/* based on http://stackoverflow.com/questions/38213329/how-to-add-css3-transition-with-html5-details-summary-tag-reveal */
+    details[open] SUMMARY ~ * 
+    {
+     animation: sweep 1.5s ease-in-out;
+    }
+    @keyframes sweep 
+    {
+     0%    {opacity: 0; margin-left: 125px}
+    }
+footer {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    background-color: #00BFFF;
+    color: #006485;
+    text-align: center;
+}
+img {
+    margin: 0 5px 10px 0;
+}
+section img {
+    margin: 5px 15px 15px 0;
+}
+picture img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform .3s ease-in, width .3s ease-in, box-shadow .3s ease-in;
+}
+/* transform and filter */
+picture img:hover {
+    position: relative;
+    top: 10px;
+    transform: rotate(2deg) scale(1.2);
+    width: 90%;
+    filter: drop-shadow(3px 5px 3px #011A91);
+}
+/* transition */
+.flag {
+    transition: transform 1s;
+}
+/* transform and filter */
+.flag:active {
+    transform: scale(1.5);
+    filter: opacity(70%);
+}
+
+/* Flexbox Grid System
+------------------------------ */
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+[class*='col-'] {
+    flex: 0 0 94%;
+}
+
+/* Media Queries
+------------------------------ */
+@media only screen and (min-width: 615px) and (max-width: 960px) {
+    .col-1-2,
+    .col-1-2-3 {
+        flex: 0 0 44%;
+    }
+    /* flexbox reodering */
+    .pull-right-1{
+        order: 1;
+    }
+    .push-left-1 {
+        order: 2;
+    } /* end flexbox reordering */
+    footer {
+        height: 50px;
+        line-height: normal;
+    }
+    section img {
+        margin: 5px 15px 0 0;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    .col-1-3,
+    .col-1-2-3 {
+        flex: 0 0 28%;
+    }
+    .col-1-2 {
+        flex: 0 0 44%;
+    }
+    /* flexbox reordering */
+    .pull-right-1{
+         order: 1;
+     }
+    .push-left-1 {
+        order: 2;
+    } /* end flexbox reordering */
+    footer {
+        height: 50px;
+        line-height: normal;
+    }
+    section img {
+        margin: 5px 15px 0 0;
+    }
+}
+
+/* Flag Icons
+------------------------------
+source:  http://www.countryflags.com/en/ */
+
+/* Aircraft Images
+------------------------------
+source:  https://wall.alphacoders.com/by_sub_category.php?id=57217 */
